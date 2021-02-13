@@ -7,11 +7,11 @@ dependencies {
     implementation(project(":common"))
     implementation("com.google.android.material:material:1.2.1")
     implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.2")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
 }
 
 android {
-    compileSdkVersion(29)
+    compileSdkVersion(30)
     defaultConfig {
         applicationId = "de.keepin.basics.android"
         minSdkVersion(24)
@@ -24,4 +24,9 @@ android {
             isMinifyEnabled = false
         }
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion = "30.0.2"
 }
