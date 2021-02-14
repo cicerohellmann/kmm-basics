@@ -1,0 +1,32 @@
+---
+installation_method:
+  name: cocoapods
+  options:
+    :deterministic_uuids: false
+    :disable_input_output_paths: false
+    :generate_multiple_pod_projects: false
+    :incremental_installation: false
+    :share_schemes_for_development_pods: true
+    :warn_for_multiple_pod_sources: false
+workspace: common.xcworkspace
+sources:
+  - https://cdn.cocoapods.org
+plugins:
+  cocoapods-disable-podfile-validations:
+    no_abstract_only_pods: true
+  cocoapods-generate:
+    {}
+target_definitions:
+  - abstract: true
+    children:
+      - abstract: true
+        name: Transitive Dependencies
+      - name: App-iOS
+    dependencies:
+      - common:
+        - :path: "../../common/common.podspec"
+    name: Pods
+    user_project_path: common.xcodeproj
+    uses_frameworks:
+      :linkage: :dynamic
+      :packaging: :framework

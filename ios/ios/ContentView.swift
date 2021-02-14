@@ -1,3 +1,4 @@
+import cocoapods.AFNetworking.*
 import SwiftUI
 import common
 
@@ -7,6 +8,10 @@ func greet() -> String {
 
 struct ContentView: View {
     var body: some View {
+        Text(greet())
+        Text(greet())
+        Text(greet())
+        Text(greet())
         Text(greet())
     }
 }
