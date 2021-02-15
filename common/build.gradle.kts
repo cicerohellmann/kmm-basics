@@ -2,30 +2,18 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
-    kotlin("native.cocoapods")
     id("com.android.library")
 }
 
-version = "1.0"
-
 kotlin {
     android()
-    ios()
-
-    cocoapods {
-        // Configure fields required by CocoaPods.
-        summary = "KMM project with basic content ;)"
-        homepage = "https://github.com/cicerohellmann/kmm-basics"
-
-        ios.deploymentTarget = "13.5"
-
-        // You can change the name of the produced framework.
-        // By default, it is the name of the Gradle project.
-        pod("AFNetworking") {
-            version = "~> 4.0.1"
+    ios {
+        binaries {
+            framework {
+                baseName = "common"
+            }
         }
     }
-
     sourceSets {
         val commonMain by getting
         val commonTest by getting {
