@@ -5,6 +5,19 @@ plugins {
     id("com.android.library")
 }
 
+android {
+    compileSdkVersion(30)
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+    defaultConfig {
+        minSdkVersion(21)
+        targetSdkVersion(29)
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
 // workaround for https://youtrack.jetbrains.com/issue/KT-43944
 android {
     buildToolsVersion = "30.0.2"
@@ -49,20 +62,6 @@ kotlin {
         val iosMain by getting
         val iosTest by getting
     }
-}
-
-android {
-    compileSdkVersion(29)
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    defaultConfig {
-        minSdkVersion(24)
-        targetSdkVersion(29)
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    buildToolsVersion = "30.0.2"
 }
 
 val packForXcode by tasks.creating(Sync::class) {
