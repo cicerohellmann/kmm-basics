@@ -7,8 +7,8 @@ android {
     compileSdkVersion(30)
     defaultConfig {
         applicationId = "de.keepin.basics.android"
-        minSdkVersion(21)
-        targetSdkVersion(29)
+        minSdkVersion(AndroidSdk.min)
+        targetSdkVersion(AndroidSdk.target)
 
         versionCode = 1
         versionName = "1.0"
@@ -20,7 +20,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-alpha11"
+        kotlinCompilerExtensionVersion = Versions.compose
     }
 
     buildTypes {
@@ -40,7 +40,7 @@ android {
         jvmTarget = "1.8"
         useIR = true
     }
-    buildToolsVersion = "30.0.2"
+    buildToolsVersion = Versions.buildTools
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
@@ -51,25 +51,9 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         )
     }
 }
-object Versions {
-    const val compose = "1.0.0-alpha11"
-    const val nav_compose = "1.0.0-alpha06"
-    const val accompanist = "0.5.0"
-}
-
-object Compose {
-    const val ui = "androidx.compose.ui:ui:${Versions.compose}"
-    const val uiGraphics = "androidx.compose.ui:ui-graphics:${Versions.compose}"
-    const val uiTooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
-    const val foundationLayout = "androidx.compose.foundation:foundation-layout:${Versions.compose}"
-    const val material = "androidx.compose.material:material:${Versions.compose}"
-    const val runtimeLiveData = "androidx.compose.runtime:runtime-livedata:${Versions.compose}"
-    const val navigation = "androidx.navigation:navigation-compose:${Versions.nav_compose}"
-    const val accompanist= "dev.chrisbanes.accompanist:accompanist-coil:${Versions.accompanist}"
-}
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation(AndroidX.appcompat)
 
     implementation(Compose.ui)
     implementation(Compose.uiGraphics)
