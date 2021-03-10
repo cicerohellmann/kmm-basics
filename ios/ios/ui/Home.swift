@@ -10,26 +10,28 @@ import SwiftUI
 
 struct Home: View {
     @Binding var user : User
-    @State private var login: String = ""
-    @State private var password: String = ""
     let saveAction: () -> Void
     var body: some View {
-        VStack(alignment: .center
-        ) {
-            Spacer()
-            Spacer()
-            TextField("Login", text: $login).multilineTextAlignment(.center)
-            TextField("Password", text: $password).multilineTextAlignment(.center)
-            Spacer()
-            Button(action: {
-                self.user.isLogged = true
-                self.saveAction()
-                    
-            })
-            {
-                Text("Pop to root")
-            }
-            Spacer()
+        TabView {
+            Pacients()
+                .tabItem {
+                    Image(systemName: "circle")
+                    Text("Tab1")
+                }
+
+            Pacients()
+                .tabItem {
+                    Image(systemName: "circle")
+                    Text("Tab2")
+                }
         }
     }
 }
+//Button(action: {
+//    self.user.isLogged = true
+//    self.saveAction()
+//
+//})
+//{
+//    Text("Pop to login")
+//}
