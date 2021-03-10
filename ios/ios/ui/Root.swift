@@ -7,17 +7,25 @@
 //
 
 import SwiftUI
+import common
 
 struct Root: View {
-    @State var rootIsActive : Bool = true
+    @ObservedObject var userData = UserData()
+    
     var body: some View {
         NavigationView {
-            if(rootIsActive){
-                Login(shouldPopToRootView: self.$rootIsActive)
+            
+            if(!userData.user.isLogged){
+                Home(user: $userData.user){
+                    userData.save()
+                }
             }else{
-                Home()
+                Login(user: $userData.user){
+                    userData.save()
+                }
             }
+        }.onAppear {
+            userData.load()
         }
     }
 }
-

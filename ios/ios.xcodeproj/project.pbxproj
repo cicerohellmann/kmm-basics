@@ -19,6 +19,7 @@
 		E26E25DF25F950E20057B75A /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25DE25F950E20057B75A /* Root.swift */; };
 		E26E25E525F952E40057B75A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25E425F952E40057B75A /* Login.swift */; };
 		E26E25E925F953210057B75A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25E825F953210057B75A /* Home.swift */; };
+		E26E25F725F95CE20057B75A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25F625F95CE20057B75A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E26E25DE25F950E20057B75A /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		E26E25E425F952E40057B75A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E26E25E825F953210057B75A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E26E25F625F95CE20057B75A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		7555FF7D242A565900829871 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				E26E25F525F95CD70057B75A /* model */,
 				E26E25EC25F95B0D0057B75A /* ui */,
 				7555FF7E242A565900829871 /* AppDelegate.swift */,
 				7555FF80242A565900829871 /* SceneDelegate.swift */,
@@ -175,6 +178,14 @@
 				E26E25E825F953210057B75A /* Home.swift */,
 			);
 			path = ui;
+			sourceTree = "<group>";
+		};
+		E26E25F525F95CD70057B75A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E26E25F625F95CE20057B75A /* User.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 			files = (
 				E26E25DF25F950E20057B75A /* Root.swift in Sources */,
 				7555FF7F242A565900829871 /* AppDelegate.swift in Sources */,
+				E26E25F725F95CE20057B75A /* User.swift in Sources */,
 				7555FF81242A565900829871 /* SceneDelegate.swift in Sources */,
 				E26E25E525F952E40057B75A /* Login.swift in Sources */,
 				E26E25E925F953210057B75A /* Home.swift in Sources */,

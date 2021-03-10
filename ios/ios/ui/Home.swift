@@ -9,12 +9,27 @@
 import SwiftUI
 
 struct Home: View {
+    @Binding var user : User
+    @State private var login: String = ""
+    @State private var password: String = ""
+    let saveAction: () -> Void
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center
-            ) {
-                Text("NavigationTest")
+        VStack(alignment: .center
+        ) {
+            Spacer()
+            Spacer()
+            TextField("Login", text: $login).multilineTextAlignment(.center)
+            TextField("Password", text: $password).multilineTextAlignment(.center)
+            Spacer()
+            Button(action: {
+                self.user.isLogged = true
+                self.saveAction()
+                    
+            })
+            {
+                Text("Pop to root")
             }
-        }.navigationBarHidden(true)
+            Spacer()
+        }
     }
 }
