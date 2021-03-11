@@ -19,7 +19,7 @@ struct Home: View {
                     Text("Tab1")
                 }
 
-            Pacients()
+            Profile()
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Tab2")

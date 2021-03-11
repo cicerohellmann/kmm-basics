@@ -10,6 +10,9 @@ import SwiftUI
 
 struct Pacients: View {
     var body: some View {
-        Text("Pacients")
+        List {
+            PacientRow(pacient: Pacient(id: 0, name: "Jarb"))
+            PacientRow(pacient: Pacient(id: 0, name: "Lard"))
+        }
     }
 }

@@ -29,3 +29,9 @@ struct Root: View {
         }
     }
 }
+
+struct RootPreviews: PreviewProvider {
+    static var previews: some View {
+        Root()
+    }
+}
