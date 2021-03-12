@@ -17,13 +17,13 @@ struct Home: View {
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Tab1")
-                }
+                }.navigationBarHidden(true)
 
             Profile()
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Tab2")
-                }
+                }.navigationBarHidden(true)
         }
     }
 }
