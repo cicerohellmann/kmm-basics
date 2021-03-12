@@ -11,12 +11,10 @@ import SwiftUI
 struct Profile: View {
     var body: some View {
         VStack(alignment: .center) {
-            Color.purple
-                .overlay(
-                    VStack(alignment: .center) {
-                        Spacer()
-                    }).offset(y: -100).frame(width: nil, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            
+            GeometryReader { geo in
+                Color.purple.position(x: geo.size.width * 0.5, y: geo.size.height * 0.3)
+            }
+            Spacer()
             CircleImage()
                 .offset(y: -200)
                 .padding(.bottom, -130)
@@ -28,7 +26,7 @@ struct Profile: View {
                     Text("Joshua Tree National Park")
                         .font(.subheadline)
                     Spacer()
-                    Text("California")
+                    Text("California") 
                         .font(.subheadline)
                 }
             }.padding()
@@ -40,5 +38,6 @@ struct Profile: View {
 struct ProfilePreviews: PreviewProvider {
     static var previews: some View {
         Profile()
+            .previewDevice("iPhone 8")
     }
 }

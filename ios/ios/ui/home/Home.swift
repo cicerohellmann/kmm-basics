@@ -27,11 +27,3 @@ struct Home: View {
         }
     }
 }
-//Button(action: {
-//    self.user.isLogged = true
-//    self.saveAction()
-//
-//})
-//{
-//    Text("Pop to login")
-//}

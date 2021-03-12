@@ -13,19 +13,22 @@ struct Root: View {
     @ObservedObject var userData = UserData()
     
     var body: some View {
-        NavigationView {
-            
-            if(!userData.user.isLogged){
+        if(userData.user.isLogged){
+            NavigationView {
                 Home(user: $userData.user){
                     userData.save()
                 }
-            }else{
+            }.onAppear {
+                userData.load()
+            }
+        }else{
+            NavigationView {
                 Login(user: $userData.user){
                     userData.save()
                 }
+            }.onAppear {
+                userData.load()
             }
-        }.onAppear {
-            userData.load()
         }
     }
 }

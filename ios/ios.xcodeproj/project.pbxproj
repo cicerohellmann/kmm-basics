@@ -184,11 +184,9 @@
 		E26E25EC25F95B0D0057B75A /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				E2F168C725FBFC70001D127C /* login */,
+				E2F168C625FBFC5E001D127C /* home */,
 				E26E25DE25F950E20057B75A /* Root.swift */,
-				E26E25E425F952E40057B75A /* Login.swift */,
-				E26E25E825F953210057B75A /* Home.swift */,
-				E2B6994325F9858100843AE1 /* Pacients.swift */,
-				E25770D325F9914C00F57A72 /* Profile.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -209,6 +207,24 @@
 				E25770D725F9930B00F57A72 /* CircleImage.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		E2F168C625FBFC5E001D127C /* home */ = {
+			isa = PBXGroup;
+			children = (
+				E25770D325F9914C00F57A72 /* Profile.swift */,
+				E2B6994325F9858100843AE1 /* Pacients.swift */,
+				E26E25E825F953210057B75A /* Home.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		E2F168C725FBFC70001D127C /* login */ = {
+			isa = PBXGroup;
+			children = (
+				E26E25E425F952E40057B75A /* Login.swift */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

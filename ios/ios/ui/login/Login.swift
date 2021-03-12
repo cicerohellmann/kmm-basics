@@ -22,7 +22,7 @@ struct Login: View {
             TextField("Password", text: $password).multilineTextAlignment(.center)
             Spacer()
             Button(action: {
-                self.user.isLogged = false
+                self.user.isLogged = true
                 self.saveAction()
                     
             })
