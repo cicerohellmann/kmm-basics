@@ -22,6 +22,13 @@
 		E26E25E525F952E40057B75A /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25E425F952E40057B75A /* Login.swift */; };
 		E26E25E925F953210057B75A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25E825F953210057B75A /* Home.swift */; };
 		E26E25F725F95CE20057B75A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25F625F95CE20057B75A /* User.swift */; };
+		E2B4D1F825FCFA930058CD31 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4D1F725FCFA930058CD31 /* Detail.swift */; };
+		E2B4D1FF25FCFB700058CD31 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4D1FE25FCFB700058CD31 /* Notes.swift */; };
+		E2B4D20525FCFBC60058CD31 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4D20425FCFBC60058CD31 /* Reminders.swift */; };
+		E2B4D20B25FD30D80058CD31 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4D20A25FD30D80058CD31 /* Note.swift */; };
+		E2B4D20F25FD33CF0058CD31 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4D20E25FD33CF0058CD31 /* Reminder.swift */; };
+		E2B4D21325FD345A0058CD31 /* ReminderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4D21225FD345A0058CD31 /* ReminderRow.swift */; };
+		E2B4D21725FD34ED0058CD31 /* NoteRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B4D21625FD34ED0058CD31 /* NoteRow.swift */; };
 		E2B6994425F9858100843AE1 /* Pacients.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6994325F9858100843AE1 /* Pacients.swift */; };
 		E2B6994925F989DF00843AE1 /* PactientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6994825F989DF00843AE1 /* PactientRow.swift */; };
 		E2B6994F25F98A0800843AE1 /* Pacient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6994E25F98A0800843AE1 /* Pacient.swift */; };
@@ -79,6 +86,13 @@
 		E26E25E425F952E40057B75A /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E26E25E825F953210057B75A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		E26E25F625F95CE20057B75A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E2B4D1F725FCFA930058CD31 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		E2B4D1FE25FCFB700058CD31 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		E2B4D20425FCFBC60058CD31 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
+		E2B4D20A25FD30D80058CD31 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E2B4D20E25FD33CF0058CD31 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		E2B4D21225FD345A0058CD31 /* ReminderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRow.swift; sourceTree = "<group>"; };
+		E2B4D21625FD34ED0058CD31 /* NoteRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRow.swift; sourceTree = "<group>"; };
 		E2B6994325F9858100843AE1 /* Pacients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pacients.swift; sourceTree = "<group>"; };
 		E2B6994825F989DF00843AE1 /* PactientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PactientRow.swift; sourceTree = "<group>"; };
 		E2B6994E25F98A0800843AE1 /* Pacient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pacient.swift; sourceTree = "<group>"; };
@@ -184,6 +198,7 @@
 		E26E25EC25F95B0D0057B75A /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				E2B4D1F625FCFA730058CD31 /* detail */,
 				E2F168C725FBFC70001D127C /* login */,
 				E2F168C625FBFC5E001D127C /* home */,
 				E26E25DE25F950E20057B75A /* Root.swift */,
@@ -196,8 +211,38 @@
 			children = (
 				E26E25F625F95CE20057B75A /* User.swift */,
 				E2B6994E25F98A0800843AE1 /* Pacient.swift */,
+				E2B4D20A25FD30D80058CD31 /* Note.swift */,
+				E2B4D20E25FD33CF0058CD31 /* Reminder.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E2B4D1F625FCFA730058CD31 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				E2B4D21B25FD36820058CD31 /* reminders */,
+				E2B4D21A25FD367A0058CD31 /* notes */,
+				E2B4D1F725FCFA930058CD31 /* Detail.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		E2B4D21A25FD367A0058CD31 /* notes */ = {
+			isa = PBXGroup;
+			children = (
+				E2B4D21625FD34ED0058CD31 /* NoteRow.swift */,
+				E2B4D1FE25FCFB700058CD31 /* Notes.swift */,
+			);
+			path = notes;
+			sourceTree = "<group>";
+		};
+		E2B4D21B25FD36820058CD31 /* reminders */ = {
+			isa = PBXGroup;
+			children = (
+				E2B4D21225FD345A0058CD31 /* ReminderRow.swift */,
+				E2B4D20425FCFBC60058CD31 /* Reminders.swift */,
+			);
+			path = reminders;
 			sourceTree = "<group>";
 		};
 		E2B6994725F9890100843AE1 /* components */ = {
@@ -381,16 +426,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E26E25DF25F950E20057B75A /* Root.swift in Sources */,
+				E2B4D1FF25FCFB700058CD31 /* Notes.swift in Sources */,
 				E25770D425F9914C00F57A72 /* Profile.swift in Sources */,
+				E2B4D20525FCFBC60058CD31 /* Reminders.swift in Sources */,
+				E2B4D1F825FCFA930058CD31 /* Detail.swift in Sources */,
+				E2B4D20B25FD30D80058CD31 /* Note.swift in Sources */,
+				E2B4D21725FD34ED0058CD31 /* NoteRow.swift in Sources */,
 				E2B6994F25F98A0800843AE1 /* Pacient.swift in Sources */,
 				7555FF7F242A565900829871 /* AppDelegate.swift in Sources */,
 				E26E25F725F95CE20057B75A /* User.swift in Sources */,
 				7555FF81242A565900829871 /* SceneDelegate.swift in Sources */,
 				E2B6994925F989DF00843AE1 /* PactientRow.swift in Sources */,
 				E2B6994425F9858100843AE1 /* Pacients.swift in Sources */,
+				E2B4D21325FD345A0058CD31 /* ReminderRow.swift in Sources */,
 				E25770D825F9930B00F57A72 /* CircleImage.swift in Sources */,
 				E26E25E525F952E40057B75A /* Login.swift in Sources */,
 				E26E25E925F953210057B75A /* Home.swift in Sources */,
+				E2B4D20F25FD33CF0058CD31 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

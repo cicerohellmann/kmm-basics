@@ -9,16 +9,26 @@
 import SwiftUI
 
 struct Profile: View {
+    @EnvironmentObject var user: UserData
+    
+    let saveAction: () -> Void
     var body: some View {
         VStack(alignment: .center) {
             GeometryReader { geo in
                 Color.purple.position(x: geo.size.width * 0.5, y: geo.size.height * 0.3)
             }
             Spacer()
-            CircleImage()
+            CircleImage(radius: 100)
                 .offset(y: -200)
                 .padding(.bottom, -130)
             
+            Button(action: {
+                self.user.user.isLogged = false
+                self.saveAction()
+            }) {
+                Text("Logout")
+            }
+
             VStack(alignment: .leading) {
                 Text("Turtle Rock")
                     .font(.title)
@@ -37,7 +47,7 @@ struct Profile: View {
 
 struct ProfilePreviews: PreviewProvider {
     static var previews: some View {
-        Profile()
+        Profile(saveAction: {})
             .previewDevice("iPhone 8")
     }
 }

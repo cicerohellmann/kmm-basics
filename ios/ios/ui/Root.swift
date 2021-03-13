@@ -20,7 +20,8 @@ struct Root: View {
                 }
             }.onAppear {
                 userData.load()
-            }
+            }.environmentObject(userData)
+            
         }else{
             NavigationView {
                 Login(user: $userData.user){

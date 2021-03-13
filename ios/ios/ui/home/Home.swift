@@ -17,9 +17,9 @@ struct Home: View {
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Tab1")
-                }.navigationBarHidden(true)
+                }   .navigationBarHidden(true)
 
-            Profile()
+            Profile(saveAction: saveAction)
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Tab2")

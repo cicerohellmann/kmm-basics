@@ -6,16 +6,18 @@
 //  Copyright © 2021 orgName. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
 struct PacientRow: View {
     var pacient: Pacient
 
     var body: some View {
-        HStack {
-            Text(pacient.name)
-            Spacer()
+        NavigationLink(destination: Detail(pacient: pacient)) {
+            HStack {
+                CircleImage(radius: 25)
+                Text(pacient.name)
+                Spacer()
+            }
         }
     }
 }

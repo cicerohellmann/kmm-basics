@@ -9,9 +9,11 @@
 import SwiftUI
 
 struct CircleImage: View {
+    var radius: Int
     var body: some View {
+        let diameter = CGFloat(radius)*2
         Image("imBaloon")
-            .frame(width: 200.0, height:200.0)
+            .frame(width: diameter, height: diameter)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 5)
@@ -20,6 +22,6 @@ struct CircleImage: View {
 
 struct CircleImage_Previews: PreviewProvider {
     static var previews: some View {
-        CircleImage()
+        CircleImage(radius: 100)
     }
 }
