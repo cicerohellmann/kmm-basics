@@ -10,36 +10,40 @@ import SwiftUI
 
 struct Detail: View {
     var pacient : Pacient
+    @State private var showingChildView = false
     var body: some View {
-        Color.red
-            .frame(height: 200)
-            .edgesIgnoringSafeArea([.top])
-        
-        CircleImage(radius: 100)
-            .offset(y: -230)
-            .padding(.bottom, -230)
-        
-        
-        TabView {
-            Notes()
-                .tabItem {
-                    Image(systemName: "circle")
-                    Text("Notes")
-                }
+        VStack(alignment: .center, spacing: nil, content: {
+            Color.gray
+                .frame(height: 200)
+                .edgesIgnoringSafeArea([.top])
             
-            Reminders()
-                .tabItem {
-                    Image(systemName: "circle")
-                    Text("Reminders")
-                }
-        }.navigationBarItems(trailing:
-                                Button(action: {
-                                    print("Edit button pressed...")
-                                }) {
-                                    Text("+")
-                                }
-        )
-        .navigationBarHidden(true)
+            CircleImage(radius: 100)
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            
+            TabView {
+                Notes()
+                    .tabItem {
+                        Image(systemName: "circle")
+                        Text("Notes")
+                    }
+                
+                Reminders()
+                    .tabItem {
+                        Image(systemName: "circle")
+                        Text("Reminders")
+                    }
+            }.navigationBarItems(
+                trailing: Button(action:{
+                    self.showingChildView = true
+                }) { Text("+") }
+            )
+        
+                NavigationLink(destination: ReminderComposer(),
+                               isActive: self.$showingChildView)
+                { EmptyView() }
+        })
     }
 }
 

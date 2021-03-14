@@ -32,6 +32,8 @@
 		E2B6994425F9858100843AE1 /* Pacients.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6994325F9858100843AE1 /* Pacients.swift */; };
 		E2B6994925F989DF00843AE1 /* PactientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6994825F989DF00843AE1 /* PactientRow.swift */; };
 		E2B6994F25F98A0800843AE1 /* Pacient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6994E25F98A0800843AE1 /* Pacient.swift */; };
+		E2BB4C5525FD5A1E00B2A7B9 /* ReminderComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BB4C5425FD5A1E00B2A7B9 /* ReminderComposer.swift */; };
+		E2BB4C5925FD80B900B2A7B9 /* NoteComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BB4C5825FD80B900B2A7B9 /* NoteComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		E2B6994325F9858100843AE1 /* Pacients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pacients.swift; sourceTree = "<group>"; };
 		E2B6994825F989DF00843AE1 /* PactientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PactientRow.swift; sourceTree = "<group>"; };
 		E2B6994E25F98A0800843AE1 /* Pacient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pacient.swift; sourceTree = "<group>"; };
+		E2BB4C5425FD5A1E00B2A7B9 /* ReminderComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderComposer.swift; sourceTree = "<group>"; };
+		E2BB4C5825FD80B900B2A7B9 /* NoteComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,7 @@
 			children = (
 				E2B4D21625FD34ED0058CD31 /* NoteRow.swift */,
 				E2B4D1FE25FCFB700058CD31 /* Notes.swift */,
+				E2BB4C5825FD80B900B2A7B9 /* NoteComposer.swift */,
 			);
 			path = notes;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			children = (
 				E2B4D21225FD345A0058CD31 /* ReminderRow.swift */,
 				E2B4D20425FCFBC60058CD31 /* Reminders.swift */,
+				E2BB4C5425FD5A1E00B2A7B9 /* ReminderComposer.swift */,
 			);
 			path = reminders;
 			sourceTree = "<group>";
@@ -428,7 +434,9 @@
 				E26E25DF25F950E20057B75A /* Root.swift in Sources */,
 				E2B4D1FF25FCFB700058CD31 /* Notes.swift in Sources */,
 				E25770D425F9914C00F57A72 /* Profile.swift in Sources */,
+				E2BB4C5925FD80B900B2A7B9 /* NoteComposer.swift in Sources */,
 				E2B4D20525FCFBC60058CD31 /* Reminders.swift in Sources */,
+				E2BB4C5525FD5A1E00B2A7B9 /* ReminderComposer.swift in Sources */,
 				E2B4D1F825FCFA930058CD31 /* Detail.swift in Sources */,
 				E2B4D20B25FD30D80058CD31 /* Note.swift in Sources */,
 				E2B4D21725FD34ED0058CD31 /* NoteRow.swift in Sources */,
