@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath(Tools.gradle)
         classpath(Kotlin.gradle)
+        classpath(Kotlin.serialization)
     }
 }
 

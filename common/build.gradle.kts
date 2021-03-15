@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("kotlinx-serialization")
 }
 
 android {
@@ -41,12 +42,27 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
-        val commonTest by getting
-        val androidMain by getting
-        val androidTest by getting
-        val iosMain by getting
-        val iosTest by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(Ktor.core)
+                implementation(Ktor.json)
+                implementation(Ktor.logging)
+                implementation(Ktor.serialization)
+
+                implementation(Serialization.it)
+
+            }
+        }
+        val androidMain by getting {
+            dependencies {
+                implementation(Ktor.android)
+            }
+        }
+        val iosMain by getting {
+            dependencies {
+                implementation(Ktor.ios)
+            }
+        }
     }
 }
 
