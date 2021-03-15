@@ -3,8 +3,8 @@ object Versions {
     const val kermit = "0.1.8"
     const val ktor = "1.5.2"
     const val kotlinxSerialization = "1.0.1"
-    const val compose = "1.0.0-alpha11"
-    const val nav_compose = "1.0.0-alpha06"
+    const val compose = "1.0.0-beta02"
+    const val nav_compose = "1.0.0-alpha09"
     const val accompanist = "0.6.2"
     const val buildTools = "30.0.2"
 }
