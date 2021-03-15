@@ -11,4 +11,5 @@ import Foundation
 struct Pacient: Hashable, Codable {
     var id: Int
     var name: String
+    var note: String
 }

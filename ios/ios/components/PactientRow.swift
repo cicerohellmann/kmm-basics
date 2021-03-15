@@ -15,8 +15,10 @@ struct PacientRow: View {
         NavigationLink(destination: Detail(pacient: pacient)) {
             HStack {
                 CircleImage(radius: 25)
-                Text(pacient.name)
-                Spacer()
+                VStack(alignment: .leading, spacing: nil, content: {
+                    Text(pacient.name).font(.body).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    Text(pacient.note).font(.subheadline).fontWeight(.light)
+                })
             }
         }
     }
@@ -25,8 +27,8 @@ struct PacientRow: View {
 struct PacientRowPreviews: PreviewProvider {
     static var previews: some View {
         List {
-            PacientRow(pacient: Pacient(id: 0, name: "Jarb"))
-            PacientRow(pacient: Pacient(id: 0, name: "Lard"))
+            PacientRow(pacient: Pacient(id: 0, name: "Jarb", note: "Something should be here"))
+            PacientRow(pacient: Pacient(id: 0, name: "Lard", note: "Something should be here"))
         }
     }
 }

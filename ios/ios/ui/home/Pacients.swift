@@ -11,8 +11,14 @@ import SwiftUI
 struct Pacients: View {
     var body: some View {
         List {
-            PacientRow(pacient: Pacient(id: 0, name: "Jarb"))
-            PacientRow(pacient: Pacient(id: 0, name: "Lard"))
-        }
+            PacientRow(pacient: Pacient(id: 0, name: "Jarb", note: "Something should be here"))
+            PacientRow(pacient: Pacient(id: 0, name: "Lard", note: "Something should be here"))
+        }.padding(.top).padding(.leading).padding(.trailing)
+    }
+}
+
+struct PacientsPreviews: PreviewProvider {
+    static var previews: some View {
+        Pacients()
     }
 }

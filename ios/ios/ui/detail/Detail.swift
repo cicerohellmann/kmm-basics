@@ -49,6 +49,6 @@ struct Detail: View {
 
 struct DetailPreviews: PreviewProvider {
     static var previews: some View {
-        Detail(pacient: Pacient(id: 0, name: "test"))
+        Detail(pacient: Pacient(id: 0, name: "test", note: "Something should be here"))
     }
 }
