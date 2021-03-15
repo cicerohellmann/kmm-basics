@@ -16,6 +16,8 @@
 		7555FFA1242A565B00829871 /* iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FFA0242A565B00829871 /* iosUITests.swift */; };
 		7555FFB2242A642300829871 /* common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7555FFB1242A642300829871 /* common.framework */; };
 		7555FFB3242A642300829871 /* common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7555FFB1242A642300829871 /* common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E226CB1225FE94FA0056EDD5 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = E226CB1125FE94FA0056EDD5 /* Button.swift */; };
+		E226CB1C25FFEFF20056EDD5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E226CB1B25FFEFF20056EDD5 /* Localizable.strings */; };
 		E25770D425F9914C00F57A72 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25770D325F9914C00F57A72 /* Profile.swift */; };
 		E25770D825F9930B00F57A72 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25770D725F9930B00F57A72 /* CircleImage.swift */; };
 		E26E25DF25F950E20057B75A /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26E25DE25F950E20057B75A /* Root.swift */; };
@@ -82,6 +84,8 @@
 		7555FFA0242A565B00829871 /* iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITests.swift; sourceTree = "<group>"; };
 		7555FFA2242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7555FFB1242A642300829871 /* common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = common.framework; path = "../common/build/xcode-frameworks/common.framework"; sourceTree = "<group>"; };
+		E226CB1125FE94FA0056EDD5 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		E226CB1B25FFEFF20056EDD5 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ios/Localizable.strings; sourceTree = SOURCE_ROOT; };
 		E25770D325F9914C00F57A72 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E25770D725F9930B00F57A72 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		E26E25DE25F950E20057B75A /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		7555FF7D242A565900829871 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				E226CB1B25FFEFF20056EDD5 /* Localizable.strings */,
 				E2B6994725F9890100843AE1 /* components */,
 				E26E25F525F95CD70057B75A /* model */,
 				E26E25EC25F95B0D0057B75A /* ui */,
@@ -256,6 +261,7 @@
 			children = (
 				E2B6994825F989DF00843AE1 /* PactientRow.swift */,
 				E25770D725F9930B00F57A72 /* CircleImage.swift */,
+				E226CB1125FE94FA0056EDD5 /* Button.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7555FF8B242A565B00829871 /* LaunchScreen.storyboard in Resources */,
+				E226CB1C25FFEFF20056EDD5 /* Localizable.strings in Resources */,
 				7555FF88242A565B00829871 /* Preview Assets.xcassets in Resources */,
 				7555FF85242A565B00829871 /* Assets.xcassets in Resources */,
 			);
@@ -438,6 +445,7 @@
 				E2B4D20525FCFBC60058CD31 /* Reminders.swift in Sources */,
 				E2BB4C5525FD5A1E00B2A7B9 /* ReminderComposer.swift in Sources */,
 				E2B4D1F825FCFA930058CD31 /* Detail.swift in Sources */,
+				E226CB1225FE94FA0056EDD5 /* Button.swift in Sources */,
 				E2B4D20B25FD30D80058CD31 /* Note.swift in Sources */,
 				E2B4D21725FD34ED0058CD31 /* NoteRow.swift in Sources */,
 				E2B6994F25F98A0800843AE1 /* Pacient.swift in Sources */,

@@ -19,17 +19,45 @@ struct Login: View {
             Spacer()
             Spacer()
             TextField("Login", text: $login).multilineTextAlignment(.center)
+            Divider().padding(.trailing).padding(.leading)
             TextField("Password", text: $password).multilineTextAlignment(.center)
+            Divider().padding(.leading)
+            
+            HStack(
+            ) {
+                Spacer()
+                Button(action: {
+                })
+                {
+                    Text("Forgot password?").font(.footnote).foregroundColor(Color("BlueLightDarker"))
+                }
+            }.padding()
+            
             Spacer()
             Button(action: {
-                self.user.isLogged = true
-                self.saveAction()
-                    
             })
             {
-                Text("Pop to home")
+                Text("Don’t have an account? Create now").font(.footnote).foregroundColor(Color("BlueLightDarker"))
             }
-            Spacer()
+            ButtonGradient(title: "Login",action: {
+                self.user.isLogged = true
+                self.saveAction()
+
+            }).padding()
         }
     }
 }
+
+struct PreviewLogin: View{
+    @State private var user = User(id: UUID(), isLogged: false)
+    var body: some View {
+        Login(user: $user, saveAction: {})
+    }
+}
+#if DEBUG
+struct LoginPreviews: PreviewProvider {
+    static var previews: some View {
+        PreviewLogin()
+    }
+}
+#endif

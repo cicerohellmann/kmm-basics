@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ios
+
+  Created by Cicero Hellmann on 3/15/21.
+  Copyright © 2021 orgName. All rights reserved.
+*/
+
+"Login" = "Login";
+"Password" = "Password";
+"Forgot password?" = "Forgot password?";
+"Don’t have an account? Create now" = "Don’t have an account? Create now";
