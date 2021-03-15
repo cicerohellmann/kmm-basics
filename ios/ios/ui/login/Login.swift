@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import common
 
 struct Login: View {
     @Binding var user : User
@@ -46,6 +47,47 @@ struct Login: View {
             }).padding()
         }
     }
+}
+
+func login(login: String, password: String){
+        let login = common.LoginModel(email: login, password: password, userType: String(describing:UserType.professional))
+
+        if(login.isNotNullOrEmpty()){
+            common.PostLoginKt.postLoginIOS(login: login, completionHandler: {
+                login, error in
+                if(login != ""){
+                    if let token = login {
+                        self.auth(token: token)
+                    } else {
+                        print("Failed to login")
+                    }
+                }
+            })
+        }
+}
+
+func auth(token: String){
+        common.GetMeKt.getMeIOS(token: token, completionHandler: {
+            me, error in
+            if(me != nil){
+                if let object = me {
+                    if let professionalCode = object.details?.professionalCode{
+                        common.GetCustomersKt.getCustomersIOS(token: token, professionalCode: professionalCode, completionHandler: {
+                            customerList, error in
+                            if let list = customerList {
+                                print(String(describing: list) + " CustomerList")
+                            }else{
+                                print(error?.localizedDescription ?? "error")
+                            }
+                        })
+
+                    }
+
+                } else {
+                    print("failed to authenticate")
+                }
+            }
+        })
 }
 
 struct PreviewLogin: View{
