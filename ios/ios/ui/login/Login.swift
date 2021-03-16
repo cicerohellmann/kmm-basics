@@ -19,9 +19,9 @@ struct Login: View {
         ) {
             Spacer()
             Spacer()
-            TextField("Login", text: $login).multilineTextAlignment(.center)
+            TextField("Login", text: $login).multilineTextAlignment(.center).keyboardType(.emailAddress).textContentType(.emailAddress).autocapitalization(.none)
             Divider().padding(.trailing).padding(.leading)
-            TextField("Password", text: $password).multilineTextAlignment(.center)
+            TextField("Password", text: $password).multilineTextAlignment(.center).textContentType(.password)
             Divider().padding(.leading)
             
             HStack(
@@ -41,8 +41,9 @@ struct Login: View {
                 Text("Don’t have an account? Create now").font(.footnote).foregroundColor(Color("BlueLightDarker"))
             }
             ButtonGradient(title: "Login",action: {
-                self.user.isLogged = true
-                self.saveAction()
+                ios.login(login: login, password: password)
+//                self.user.isLogged = true
+//                self.saveAction()
 
             }).padding()
         }
@@ -50,14 +51,14 @@ struct Login: View {
 }
 
 func login(login: String, password: String){
-        let login = common.LoginModel(email: login, password: password, userType: String(describing:UserType.professional))
+    let login = common.LoginModel(email: login, password: password, userType: common.UserType.professionalType.typeValue)
 
         if(login.isNotNullOrEmpty()){
             common.PostLoginKt.postLoginIOS(login: login, completionHandler: {
                 login, error in
                 if(login != ""){
                     if let token = login {
-                        self.auth(token: token)
+//                        self.auth(token: token)
                     } else {
                         print("Failed to login")
                     }
@@ -66,29 +67,29 @@ func login(login: String, password: String){
         }
 }
 
-func auth(token: String){
-        common.GetMeKt.getMeIOS(token: token, completionHandler: {
-            me, error in
-            if(me != nil){
-                if let object = me {
-                    if let professionalCode = object.details?.professionalCode{
-                        common.GetCustomersKt.getCustomersIOS(token: token, professionalCode: professionalCode, completionHandler: {
-                            customerList, error in
-                            if let list = customerList {
-                                print(String(describing: list) + " CustomerList")
-                            }else{
-                                print(error?.localizedDescription ?? "error")
-                            }
-                        })
-
-                    }
-
-                } else {
-                    print("failed to authenticate")
-                }
-            }
-        })
-}
+//func auth(token: String){
+//        common.GetMeKt.getMeIOS(token: token, completionHandler: {
+//            me, error in
+//            if(me != nil){
+//                if let object = me {
+//                    if let professionalCode = object.details?.professionalCode{
+//                        common.GetCustomersKt.getCustomersIOS(token: token, professionalCode: professionalCode, completionHandler: {
+//                            customerList, error in
+//                            if let list = customerList {
+//                                print(String(describing: list) + " CustomerList")
+//                            }else{
+//                                print(error?.localizedDescription ?? "error")
+//                            }
+//                        })
+//
+//                    }
+//
+//                } else {
+//                    print("failed to authenticate")
+//                }
+//            }
+//        })
+//}
 
 struct PreviewLogin: View{
     @State private var user = User(id: UUID(), isLogged: false)
